@@ -1,0 +1,67 @@
+/*-------Global---------*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gothic';
+    font-size: 16px;
+    text-transform:initial;
+    /* background: url('../img/notes.png');  */
+    /* background-repeat: no-repeat; */
+    /* color: #d2daed; */
+}
+header{
+    text-align: center;
+    font-size: 25px; 
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    /* background: url('../img/notes.png');  */
+    background: whitesmoke;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ .router-link-active {
+    color:blue;
+    /* background-color: lightskyblue; */
+    text-decoration: none;
+}
+
+a{
+    font-family: 'Cabin Sketch', cursive;
+    color:green;
+    font-size: 25px; 
+    margin: 0 auto;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.welcome{
+    font-family: 'Cabin Sketch', cursive;
+    color:black;
+    font-size: 50px;
+    text-align: center;
+
+}
+.home{
+    /* background-color: black; */
+    /* background: url('../img/notes.png');  */
+    /* background-size: 100% 100%; */
+    /* background-repeat: no-repeat; */
+    /* width: 100wh; */
+    /* height: 100vh; */
+    color: black;
+}
