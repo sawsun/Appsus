@@ -37,7 +37,7 @@ ul {
  .router-link-active {
     color:blue;
     /* background-color: lightskyblue; */
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a{
@@ -47,6 +47,7 @@ a{
     margin: 0 auto;
     margin-right: 15px;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .welcome{
