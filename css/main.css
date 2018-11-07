@@ -24,9 +24,9 @@ header{
 }
 .links{
     display: flex;
+    margin-left: 65px;
     flex-direction: row;
     justify-content: center;
-    margin: 0 auto;
 }
 
 ul {
