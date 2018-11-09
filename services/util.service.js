@@ -16,6 +16,12 @@ function makeId(length=5) {
     return text;
   }
 
+  function rndColor(){
+      let colors = ['#cdfd96','#d6b0f9','#ccf0f7','#e5c8aa','#fef27e','#afccf8'];
+      let idx = getRandomInt(0,colors.length);
+      return colors[idx];
+  }
+
 function getCurrency(currencyCode) {
     switch(currencyCode){
         case 'ILS' : 
@@ -32,6 +38,7 @@ function getCurrency(currencyCode) {
 export default {
     getRandomInt,
     makeId,
-    getCurrency
+    getCurrency,
+    rndColor
 }
 
