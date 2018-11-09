@@ -9,6 +9,10 @@ export default {
 <div class="memo-details">
     <div v-if="memo.content" class="content">{{memo.content}}</div>
     <div>
+    <div v-if="memo.imgUrl" class="content">
+    <img :src="memo.imgUrl" class="content-img"/>
+    </div>
+    <div>
     <span class="date">{{memo.createdAt}}</span>
     <div class="editors">
     <router-link :to="'/memos/memo-edit/'+memo.id"><i class="fas fa-pencil-alt"></i></router-link>

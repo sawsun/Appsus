@@ -13,6 +13,7 @@ export default {
             placeholder="Title" :style="bgColor">
             <textarea rows="5" cols="10" class="input-content" type="text" v-model="memo.content" 
             placeholder="Content" :style="bgColor"></textarea>
+            <input class="new-img-input" type="text" v-model="memo.imgUrl" placeholder="Enter Image Url"/>
             </div>
             <div class="edit-btns">
             <input class="color-picker" type="color" v-model="memo.color"/>

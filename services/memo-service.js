@@ -91,7 +91,7 @@ function creatInitialMemos() {
             id: utilService.makeId(),
             type:'memoText',
             title: 'Password',
-            content: 'Change your gmail password',
+            content: 'Change your gmail password though no one cares about you enough to hack your account',
             color: utilService.rndColor(),
             imgUrl : '',
             createdAt: utilService.getDate(1476835200000),
@@ -136,7 +136,7 @@ function creatInitialMemos() {
             title: 'Tamara\'s walk',
             content: 'Fresh air will be good for her!',
             color: utilService.rndColor(),
-            imgUrl : '',
+            imgUrl : 'https://mail.google.com/mail/u/1?ui=2&ik=490a0d8d29&attid=0.1&permmsgid=msg-f:1616683723189863723&th=166f9d47dae3452b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_sVVHYMiVsBTWPe874Di1A-5uLHoGjXg2FVIuBG3C3nlGVUEkW_TlBjG5Az0KsjbrrWr_zjBotrLVVqMIqZ0h88goAH7643CoBlfXNdEbajNHw8XpkXzwL9PM&disp=emb&realattid=1ba938f6a1ab72a2_0.1.1',
             createdAt: utilService.getDate(1490562000000),
             isPinned : false,
 
@@ -145,7 +145,11 @@ function creatInitialMemos() {
             id: utilService.makeId(),
             type:'memoText',
             title: 'Vue.js',
-            content: 'Learn vue very well and die',
+            content: `Learn vue very well and die.
+             If you think Vue will kill you, you're abviously right, 
+             but I've heard that Angular would kill you twice, so chill and
+             finish this sprint
+            `,
             color: utilService.rndColor(), 
             imgUrl : '',
             createdAt: utilService.getDate(1509573600000),
