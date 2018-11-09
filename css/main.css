@@ -5,6 +5,10 @@
     margin: 0px;
 }
 
+#app{
+    margin: 0 auto;
+}
+
 html {
     font-family: 'Gothic';
     font-size: 16px;
@@ -16,8 +20,8 @@ header{
     font-size: 25px; 
     padding: 5px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     margin: 0 auto;
    
 }
@@ -25,7 +29,10 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    /* margin: 0 auto; */
 }
 
 ul {
@@ -40,8 +47,8 @@ ul {
     text-decoration: underline;
 }
 .logo{
-    width: 110px;
-    height: 90px;
+    width: 90px;
+    height: 60px;
 }
 
 a{
@@ -53,6 +60,11 @@ a{
     margin-left: 10px;
     text-decoration: none;
 }
+/* 
+.todo-list>*{
+    text-decoration: dotted;
+
+} */
 
 .welcome{
     font-family: 'Cabin Sketch', cursive;
@@ -61,9 +73,13 @@ a{
     margin-top: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-bottom: 20px;
     align-items: center;
 
+}
+.main-title{
+    font-size: 20px;
 }
 .home{
    
@@ -74,6 +90,7 @@ a{
     padding:10px;
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     margin: 5%;
+    /* border-radius: 3%; */
 }
 /* 
 .memo-title{
@@ -88,22 +105,55 @@ a{
 .memos-list{
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 50px;
 }
 .memo-preview{
-    width: 100%;
-    height: 200px;
+    /* width: 100%; */
+    /* height: 250px; */
+    
     object-fit: cover;
     transition: .4s;
+}
+.input-edit,.input-title{
+    display: flex;
+    flex-direction: column;
+    /* background:rgb(190, 150, 120); */
+    width: 25%;
+    height: 200px;
+    padding: 10px;
+}
+.input-edit{
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    margin: 0 auto;
+    /* width: 40%; */
+    /* height: 40vh; */
+    width: 90%;
+    height: 60vh;
+    text-align: center;
+
+}
+.input-title{
+    height: 30px;
+    width: 100%;
+    
+    border: none;
+}
+.input-content{
+    padding: 10px;
+    /* background:rgb(205, 253, 150); */
+    border: none;
+    font-size: 20px;
+
 }
 .memo-preview:hover{
     opacity: .7;
     cursor: pointer;
-    height: 220px;
+    /* border: 2px solid black; */
+    height: 102%;
 }
 
-.content{
+.content, .input-content{
     padding: 10px;
     /* font-family: 'Gochi Hand', cursive; */
     font-family: 'Itim', cursive;
@@ -111,23 +161,177 @@ a{
 
 }
 
-.title{
+.title, .input-title{
     /* font-family: 'Itim', cursive; */
     font-family: 'Gochi Hand', cursive;
-font-size: 25px;
-font-weight: bolder;
-border-bottom: 1px brown solid;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px;
+    border-bottom: 1px brown solid;
 }
+.input-title{
+    margin-top: 3px;
+   
+}
+input:focus {outline:0;}
 
 .delete{
-    float: right;
-    font-size: 12px;
-
-}
-
-.delete:hover{
-    float: right;
     font-size: 20px;
 
 }
+.pincel{
+    font-size: 25px;
+}
+.editors{
+    float: right;
+    font-size: 12px;
+    /* display: none; */
 
+}
+/* 
+.editors:hover{
+    float: right;
+    font-size: 12px;
+    display: block;
+
+} */
+
+
+
+.delete:hover{
+    /* float: right; */
+    /* font-size: 20px; */
+
+}
+
+
+.btn-todo-container{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.todo-delete{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search{
+    padding: 7px;
+    width: 200px;
+    height: 40px;
+    font-size: 1em;
+    margin-right: 5px;
+}
+.search-select{
+    width: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 7px;
+    /* border: none; */
+    background: transparent url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat 60px center;
+}
+
+
+.memo-add,.filter{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+
+select.search{
+    /* width: auto; */
+}
+
+.fa-pencil-alt{
+    font-size: 20px;
+}
+
+.color-picker{
+    -webkit-appearance: none;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 45px;
+    height: 45px;
+}
+
+.color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.memo-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+    min-height: 200px;
+    max-height: 700px;
+}
+
+.date{
+    color: gray;
+    padding: 5px;
+}
+
+.pin{
+    float: right;
+    font-size: 20px;
+}
+
+.edit-btns{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    padding: 20px;
+    margin-left: 40px;
+}
+
+.cancel-rl{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
+    margin-top: 4px;
+
+
+}
+
+.add-btn{
+    padding: 5px;
+    border: none;
+    background: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.add-todo{
+    font-size: 16px;
+    color: #8080804d;
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.add-todo:hover{
+    color: green;
+
+}
+
+.add-input{
+    border: 2px solid #8080804d;
+    width: 60%;
+    padding: 7px;
+    margin: 15px;
+    background: none;
+}

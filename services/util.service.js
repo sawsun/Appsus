@@ -22,6 +22,15 @@ function makeId(length=5) {
       return colors[idx];
   }
 
+
+function getDate(timeStamp){
+    var date = new Date(timeStamp);
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    return `${day}/${+month+1}/${year}`;
+}
+
 function getCurrency(currencyCode) {
     switch(currencyCode){
         case 'ILS' : 
@@ -39,6 +48,7 @@ export default {
     getRandomInt,
     makeId,
     getCurrency,
-    rndColor
+    rndColor,
+    getDate
 }
 

@@ -1,8 +1,8 @@
+'use strict';
+
 import memoService from '../../../services/memo-service.js';
 import utilService from '../../../services/util.service.js';
 
-// export default {
-// }
 
 export default {
     template: `
@@ -11,21 +11,38 @@ export default {
         <div class="input-edit" :style="bgColor">
             <input class="input-title" type="text" v-model="memo.title"
             placeholder="Title" :style="bgColor">
-            <textarea rows="5" cols="10" class="input-content" type="text" v-model="memo.content" 
-            placeholder="Content" :style="bgColor"></textarea>
+            <ul class="todos-container">
+            <li v-for="(todo, idx) in memo.todos">
+            <div class="btn-todo-container">
+                <input class="input-content input-todo" type="text" v-model="todo.todo"
+                placeholder="Enter todo" :style="bgColor"/> 
+                <button @click.prevent="deleteTodo(idx)" class="todo-delete">✗</button>
+                </div>
+                  </li>
+                  <form>
+                <label>
+                    <input type="text" class="add-input" v-model="newTodo" placeholder="Enter todo"/>
+                </label>
+                <button @click.prevent="addTodo" class="add-todo"><i class="fas fa-plus"></i></button>
+            </form>
+                </ul>
             </div>
             <div class="edit-btns">
-            <input class="color-picker" type="color" v-model="memo.color"/>
+            <input type="color" class="color-picker" v-model="memo.color"/>
             <button type="submit" class="add-btn"> <i class="fas fa-plus-circle"></i></button>
             <router-link exact to="/memos" class="cancel-rl">Cancel</router-link>
             </div>
         </form>
+        
     </section>
     `,
+    
     data() {
         return {
-            memo: { title: '',type:'memoText', content: '', color:'lightgoldenrodyellow',imgUrl:''
-            ,createdAt:utilService.getDate((new Date())) }
+            newTodo: '',
+            memo: { title: '', type:'memoTodo' , color: 'lightgoldenrodyellow', todos:[]
+            ,createdAt:utilService.getDate((new Date()))}
+        
         }
     },
     created() {
@@ -47,12 +64,17 @@ export default {
                     console.log('Saved!');
                     this.$router.push('/memos');
                 })
-        }
+        },
+        addTodo() {
+            this.memo.todos.push({ todo: this.newTodo, isDone: false });
+        },
+        deleteTodo(todoIdx) {
+            this.memo.todos.splice(todoIdx, 1);
+        },
     },
     computed:{
         bgColor(){
             return {'background-color': this.memo.color}
         }
     }
-    
 }
