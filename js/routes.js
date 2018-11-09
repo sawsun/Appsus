@@ -1,5 +1,5 @@
 import home from './pages/home.js'
-import email from './pages/email.js'
+import email from './pages/email/misterEmail.js'
 import memo from './pages/memos/memos.js'
 import memoEdit from './pages/memos/memo-edit.js';
 import todoEdit from './pages/memos/todo-edit.js';
